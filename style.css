@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  background: #002f4b;
+  color: #fff;
+}
+
+canvas#snow-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin: 80px auto;
+  z-index: 1;
+  text-align: center;
+  position: relative;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.2rem;
+  color: #f0f8ff;
+  margin-bottom: 20px;
+}
+
+h2.section-title {
+  color: #cce7ff;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f0f8ff;
+  margin: 15px 0;
+}
+
+/* Buttons */
+button {
+  padding: 12px 30px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background: #00c6ff;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #007acc;
+  transform: translateY(-2px);
+}
+
+.btn-glow {
+  animation: glow 2s infinite ease-in-out;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px #00c6ff, 0 0 20px #00c6ff;
+  }
+  50% {
+    box-shadow: 0 0 20px #66e0ff, 0 0 30px #66e0ff;
+  }
+}
+
+#game-area {
+  position: relative;
+  height: 300px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px dashed #cce7ff;
+}
+
+.game-info {
+  font-weight: bold;
+  color: #fff;
+  margin: 10px;
+}
+
+.snowball {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 0%, #dcefff 80%);
+  position: absolute;
+  animation: fall linear;
+  box-shadow: 0 0 10px #eef;
+}
+
+@keyframes fall {
+  from {
+    top: -50px;
+  }
+  to {
+    top: 320px;
+  }
+}
+
+.hidden {
+  display: none;
+}

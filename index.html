@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>❄️ Ucapan Ulang Tahun Ayah</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="snow-canvas"></canvas>
+
+  <div class="card animated fadeInDown">
+    <h1>🎂 Selamat Ulang Tahun, Ayah!</h1>
+    <p id="message">Klik tombol di bawah untuk melihat pesannya!</p>
+    <button onclick="showMessage()" class="btn-glow">💌 Lihat Pesan</button>
+
+    <hr />
+    <h2 class="section-title">☃️ Tangkap Bola Salju!</h2>
+    <button onclick="startGame()" class="btn-glow">▶️ Mulai Game</button>
+
+    <div id="game-area" class="hidden">
+      <p class="game-info">
+        Waktu: <span id="timer">20</span>s | Skor: <span id="score">0</span>
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
